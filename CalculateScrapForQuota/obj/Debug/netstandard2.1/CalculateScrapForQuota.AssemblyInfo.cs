@@ -10,6 +10,7 @@
 using System;
 using System.Reflection;
 
+[assembly: System.Runtime.CompilerServices.IgnoresAccessChecksToAttribute("")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("CalculateScrapForQuota")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("A template for Lethal Company")]

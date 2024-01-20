@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "F2rC7oCvDroPRye95+S6xGvmE0ICNl2zy0u4sMXJPM4xjW4wDdt+ZqE5SbaufeomTScRnCAZQnf/BCojoEkUog==",
+  "dgSpecHash": "YMfIBUqcAB/P0jUt+HIOLpeZdhUnRuOVxEVTsdz111OwhWb86VSffNJ29hQgHR6f20D9XFn8E63LVfnyDWIR/A==",
   "success": true,
   "projectFilePath": "D:\\Miscellaneous Repos\\CalculateScrapForQuota\\CalculateScrapForQuota\\CalculateScrapForQuota.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lucas\\.nuget\\packages\\bepinex.analyzers\\1.0.8\\bepinex.analyzers.1.0.8.nupkg.sha512",
+    "C:\\Users\\lucas\\.nuget\\packages\\bepinex.assemblypublicizer.msbuild\\0.4.1\\bepinex.assemblypublicizer.msbuild.0.4.1.nupkg.sha512",
     "C:\\Users\\lucas\\.nuget\\packages\\bepinex.baselib\\5.4.20\\bepinex.baselib.5.4.20.nupkg.sha512",
     "C:\\Users\\lucas\\.nuget\\packages\\bepinex.core\\5.4.21\\bepinex.core.5.4.21.nupkg.sha512",
     "C:\\Users\\lucas\\.nuget\\packages\\bepinex.plugininfoprops\\1.1.0\\bepinex.plugininfoprops.1.1.0.nupkg.sha512",
