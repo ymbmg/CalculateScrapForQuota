@@ -1,0 +1,17 @@
+D:\Miscellaneous Repos\CalculateScrapForQuota\CalculateScrapForQuota\bin\Debug\netstandard2.1\CalculateScrapForQuota.deps.json
+D:\Miscellaneous Repos\CalculateScrapForQuota\CalculateScrapForQuota\bin\Debug\netstandard2.1\CalculateScrapForQuota.dll
+D:\Miscellaneous Repos\CalculateScrapForQuota\CalculateScrapForQuota\bin\Debug\netstandard2.1\CalculateScrapForQuota.pdb
+D:\Miscellaneous Repos\CalculateScrapForQuota\CalculateScrapForQuota\obj\Debug\netstandard2.1\CalculateScrapForQuota.csproj.AssemblyReference.cache
+D:\Miscellaneous Repos\CalculateScrapForQuota\CalculateScrapForQuota\obj\Debug\netstandard2.1\PluginInfo.cs
+D:\Miscellaneous Repos\CalculateScrapForQuota\CalculateScrapForQuota\obj\Debug\netstandard2.1\CalculateScrapForQuota.GeneratedMSBuildEditorConfig.editorconfig
+D:\Miscellaneous Repos\CalculateScrapForQuota\CalculateScrapForQuota\obj\Debug\netstandard2.1\CalculateScrapForQuota.AssemblyInfoInputs.cache
+D:\Miscellaneous Repos\CalculateScrapForQuota\CalculateScrapForQuota\obj\Debug\netstandard2.1\CalculateScrapForQuota.AssemblyInfo.cs
+D:\Miscellaneous Repos\CalculateScrapForQuota\CalculateScrapForQuota\obj\Debug\netstandard2.1\CalculateScrapForQuota.csproj.CoreCompileInputs.cache
+D:\Miscellaneous Repos\CalculateScrapForQuota\CalculateScrapForQuota\obj\Debug\netstandard2.1\CalculateScrapForQuota.dll
+D:\Miscellaneous Repos\CalculateScrapForQuota\CalculateScrapForQuota\obj\Debug\netstandard2.1\CalculateScrapForQuota.pdb
+D:\Miscellaneous Repos\CalculateScrapForQuota\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.csproj.AssemblyReference.cache
+D:\Miscellaneous Repos\CalculateScrapForQuota\LethalCompanyTemplate\obj\Debug\netstandard2.1\PluginInfo.cs
+D:\Miscellaneous Repos\CalculateScrapForQuota\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.GeneratedMSBuildEditorConfig.editorconfig
+D:\Miscellaneous Repos\CalculateScrapForQuota\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.AssemblyInfoInputs.cache
+D:\Miscellaneous Repos\CalculateScrapForQuota\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.AssemblyInfo.cs
+D:\Miscellaneous Repos\CalculateScrapForQuota\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.csproj.CoreCompileInputs.cache
