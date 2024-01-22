@@ -402,4 +402,11 @@
         <HintPath>E:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.XRModule.dll</HintPath>
       </Reference>
     </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Assets\OutlineFill.mat" />
+      <None Remove="Assets\OutlineFill.shader" />
+      <None Remove="Assets\OutlineMask.mat" />
+      <None Remove="Assets\OutlineMask.shader" />
+    </ItemGroup>
 </Project>

@@ -6,23 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="d25fc2b3-9408-467a-869c-7af79ece42e7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LethalCompanyTemplate/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LethalCompanyTemplate/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CalculateScrapForQuota.sln.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/CalculateScrapForQuota.sln.DotSettings" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CalculateScrapForQuota/CalculateScrapForQuota.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CalculateScrapForQuota/CalculateScrapForQuota.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CalculateScrapForQuota/Plugin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CalculateScrapForQuota/Plugin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CalculateScrapForQuota/bin/Debug/netstandard2.1/CalculateScrapForQuota.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/CalculateScrapForQuota/bin/Debug/netstandard2.1/CalculateScrapForQuota.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CalculateScrapForQuota/bin/Debug/netstandard2.1/CalculateScrapForQuota.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CalculateScrapForQuota/bin/Debug/netstandard2.1/CalculateScrapForQuota.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CalculateScrapForQuota/obj/CalculateScrapForQuota.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/CalculateScrapForQuota/obj/CalculateScrapForQuota.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CalculateScrapForQuota/obj/CalculateScrapForQuota.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/CalculateScrapForQuota/obj/CalculateScrapForQuota.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CalculateScrapForQuota/obj/Debug/netstandard2.1/CalculateScrapForQuota.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CalculateScrapForQuota/obj/Debug/netstandard2.1/CalculateScrapForQuota.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CalculateScrapForQuota/obj/Debug/netstandard2.1/CalculateScrapForQuota.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CalculateScrapForQuota/obj/Debug/netstandard2.1/CalculateScrapForQuota.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CalculateScrapForQuota/obj/Debug/netstandard2.1/CalculateScrapForQuota.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CalculateScrapForQuota/obj/Debug/netstandard2.1/CalculateScrapForQuota.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CalculateScrapForQuota/obj/Debug/netstandard2.1/CalculateScrapForQuota.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CalculateScrapForQuota/obj/Debug/netstandard2.1/CalculateScrapForQuota.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CalculateScrapForQuota/obj/Debug/netstandard2.1/CalculateScrapForQuota.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CalculateScrapForQuota/obj/Debug/netstandard2.1/CalculateScrapForQuota.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CalculateScrapForQuota/obj/Debug/netstandard2.1/CalculateScrapForQuota.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CalculateScrapForQuota/obj/Debug/netstandard2.1/CalculateScrapForQuota.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CalculateScrapForQuota/obj/Debug/netstandard2.1/CalculateScrapForQuota.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CalculateScrapForQuota/obj/Debug/netstandard2.1/CalculateScrapForQuota.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CalculateScrapForQuota/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/CalculateScrapForQuota/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CalculateScrapForQuota/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CalculateScrapForQuota/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CalculateScrapForQuota/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/CalculateScrapForQuota/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CalculateScrapForQuota/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/CalculateScrapForQuota/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +22,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/coreclr/c17d273aa03d4b9d14c92248a91f0d0faa881b98/src/System.Private.CoreLib/shared/System/Collections/Generic/Dictionary.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6a18188ce6264976a9218286caeb57f41ea00/87/235db233/PluginInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/af9b1eec498a45aebd42601d6ab85015154600/15/ead92d85/GrabbableObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/af9b1eec498a45aebd42601d6ab85015154600/9b/a4775974/ScanNodeProperties.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/af9b1eec498a45aebd42601d6ab85015154600/aa/e5ad15d5/Item.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/af9b1eec498a45aebd42601d6ab85015154600/ad/8830230c/HUDManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -92,7 +86,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1705733993935</updated>
-      <workItem from="1705733995046" duration="2903000" />
+      <workItem from="1705733995046" duration="21307000" />
     </task>
     <servers />
   </component>
