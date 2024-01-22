@@ -23,7 +23,7 @@ namespace CalculateScrapForQuota
         private void Awake()
         {
             // Plugin startup logic
-            Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
+            Logger.LogInfo($"{PluginInfo.PLUGIN_NAME} v{PluginInfo.PLUGIN_VERSION} is loaded!");
             _logger = Logger;
             
             Harmony harmony = new(PluginInfo.PLUGIN_GUID);

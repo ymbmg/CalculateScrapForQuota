@@ -134,7 +134,8 @@ namespace CalculateScrapForQuota.Patches
         {
             var shipGrabbables = GO.GetComponentsInChildren<GrabbableObject>();
             var sellableGrabbables = shipGrabbables.Where(g => 
-                g.itemProperties.isScrap 
+                g.itemProperties.isScrap
+                && !g.isPocketed
                 && g.scrapValue > 0 
                 && g.name != "ClipboardManual" 
                 && g.name != "StickyNoteItem"
