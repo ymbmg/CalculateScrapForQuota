@@ -3,22 +3,22 @@ using UnityEngine;
 
 namespace CalculateScrapForQuota.Utils;
 
-public class DebugUtil
+public static class DebugUtil
 {
-    const BindingFlags bindingFlags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance;
+    private const BindingFlags FLAGS = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance;
     
     public static string GetGameObjectDetails(GameObject gameObject, bool ignoreProperties = false, bool ignoreFields = false)
     {
         var info = "--- GameObject Info";
         
         info += $"\nName: {gameObject.name}";
-        foreach (Component component in gameObject.GetComponents<Component>())
+        foreach (var component in gameObject.GetComponents<Component>())
         {
             info += $"\n  Component: {component.GetType().Name}";
             
             if (!ignoreProperties)
             {
-                var properties = component.GetType().GetProperties(bindingFlags);
+                var properties = component.GetType().GetProperties(FLAGS);
                 foreach (var property in properties)
                 {
                     info += $"\n    Property: {property.Name}, Value: {property.GetValue(component, null)}";
@@ -27,7 +27,7 @@ public class DebugUtil
 
             if (!ignoreFields)
             {
-                var fields = component.GetType().GetFields(bindingFlags);
+                var fields = component.GetType().GetFields(FLAGS);
                 foreach (var field in fields)
                 {
                     info += $"\n    Field: {field.Name}, Value: {field.GetValue(component)}";
