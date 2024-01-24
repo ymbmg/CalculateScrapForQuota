@@ -18,6 +18,7 @@ namespace CalculateScrapForQuota
     [BepInPlugin(PluginInfo.PLUGIN_GUID, PluginInfo.PLUGIN_NAME, PluginInfo.PLUGIN_VERSION)]
     public class Plugin : BaseUnityPlugin
     {
+        private static Config MyConfig { get; set; }
         private static ManualLogSource _logger;
         
         private void Awake()
@@ -26,10 +27,16 @@ namespace CalculateScrapForQuota
             Logger.LogInfo($"{PluginInfo.PLUGIN_NAME} v{PluginInfo.PLUGIN_VERSION} is loaded!");
             _logger = Logger;
             
+            MyConfig = new(Config);
+            
             Harmony harmony = new(PluginInfo.PLUGIN_GUID);
             harmony.PatchAll(Assembly.GetExecutingAssembly());
         }
 
-        internal static void Log(string m) => _logger.LogMessage(m);
+        internal static void Log(string m)
+        {
+            if (MyConfig.isVerbose.Value)
+                _logger.LogMessage(m);
+        }
     }
 }
