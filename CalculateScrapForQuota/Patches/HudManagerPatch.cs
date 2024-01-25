@@ -26,7 +26,7 @@ namespace CalculateScrapForQuota.Patches
     {
         private static GameObject shipGO => GameObject.Find("/Environment/HangarShip");
         private static GameObject valueCounterGO => GameObject.Find("/Systems/UI/Canvas/IngamePlayerHUD/BottomMiddle/ValueCounter");
-        private static int unmetQuota => TimeOfDay.Instance.profitQuota - TimeOfDay.Instance.quotaFulfilled;
+        private static int unmetQuota => Math.Max(0, TimeOfDay.Instance.profitQuota - TimeOfDay.Instance.quotaFulfilled);
         private static bool isAtTheCompany => StartOfRound.Instance.currentLevel.levelID == 3;
         private static bool isInShip => GameNetworkManager.Instance.localPlayerController.isInHangarShipRoom;
         
@@ -48,6 +48,9 @@ namespace CalculateScrapForQuota.Patches
                 ) return;
             
             P.Log("OnScan() is valid.");
+
+            if (unmetQuota <= 0)
+                return;
 
             List<GrabbableObject> sellableGrabbables;
             if (isInShip && !isAtTheCompany)
@@ -114,6 +117,7 @@ namespace CalculateScrapForQuota.Patches
 
         private static void HighlightGrabbables(List<GrabbableObject> grabbables)
         {
+            Highlighter.Clear();
             foreach (var go in grabbables.Select(g => g.gameObject))
             {
                 P.Log($"Adding {go.name} to Outliner");
