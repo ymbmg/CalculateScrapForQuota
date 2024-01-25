@@ -26,7 +26,9 @@ namespace CalculateScrapForQuota.Patches
     {
         private static GameObject shipGO => GameObject.Find("/Environment/HangarShip");
         private static GameObject valueCounterGO => GameObject.Find("/Systems/UI/Canvas/IngamePlayerHUD/BottomMiddle/ValueCounter");
-        private static int unmetQuota => TimeOfDay.Instance.profitQuota - TimeOfDay.Instance.quotaFulfilled;
+        private static int unmetQuota => Math.Max(0, TimeOfDay.Instance.profitQuota - TimeOfDay.Instance.quotaFulfilled);
+        private static bool isAtTheCompany => StartOfRound.Instance.currentLevel.levelID == 3;
+        private static bool isInShip => GameNetworkManager.Instance.localPlayerController.isInHangarShipRoom;
         
         [HarmonyPrefix]
         [HarmonyPatch(typeof(HUDManager), "PingScan_performed")]
@@ -43,19 +45,28 @@ namespace CalculateScrapForQuota.Patches
                 || !canPlayerScan 
                 || playerPingingScan > -1.0
                 || GameNetworkManager.Instance.localPlayerController == null
-                || (!StartOfRound.Instance.inShipPhase && !GameNetworkManager.Instance.localPlayerController.isInHangarShipRoom)
                 ) return;
             
             P.Log("OnScan() is valid.");
-            
-            var sellableGrabbables = GetSellableGrabbablesInChildren(shipGO);
-            var optimalGrabbables = MathUtil.FindBestCombination(sellableGrabbables, unmetQuota, grabbable => grabbable.scrapValue);
 
-            if (optimalGrabbables.totalValue < unmetQuota)
+            if (unmetQuota <= 0)
+                return;
+
+            List<GrabbableObject> sellableGrabbables;
+            if (isInShip && !isAtTheCompany)
+                sellableGrabbables = GetSellableGrabbablesInChildren(shipGO);
+            else if (isAtTheCompany)
+                sellableGrabbables = GetAllSellableObjects();
+            else
                 return;
             
-            HighlightGrabbables(optimalGrabbables.combination);
-            SetupText(optimalGrabbables.totalValue);
+            var optimalGrabbables = MathUtil.FindBestCombination(sellableGrabbables, unmetQuota, grabbable => grabbable.scrapValue);
+
+            if (optimalGrabbables.totalValue >= unmetQuota)
+            {
+                HighlightGrabbables(optimalGrabbables.combination);
+                SetupText(optimalGrabbables.totalValue);
+            }
             
             GameNetworkManager.Instance.StartCoroutine(Display());
         }
@@ -77,24 +88,36 @@ namespace CalculateScrapForQuota.Patches
             Highlighter.Hide();
         }
 
+        private static List<GrabbableObject> GetAllSellableObjects()
+        {
+            var grabbables = GameObject.FindObjectsOfType<GrabbableObject>();
+            var sellableGrabbables = grabbables.Where(IsGrabbableSellable).ToList();
+            return sellableGrabbables;
+            
+        }
+        
         private static List<GrabbableObject> GetSellableGrabbablesInChildren(GameObject GO)
         {
-            var shipGrabbables = GO.GetComponentsInChildren<GrabbableObject>();
-            var sellableGrabbables = shipGrabbables.Where(g => 
-                g.itemProperties.isScrap
-                && !g.isPocketed
-                && g.scrapValue > 0 
-                && g.name != "ClipboardManual" 
-                && g.name != "StickyNoteItem"
-                && g.name != "Gift"
-                && g.name != "Shotgun"
-                && g.name != "Ammo"
-                ).ToList();
+            var grabbables = GO.GetComponentsInChildren<GrabbableObject>();
+            var sellableGrabbables = grabbables.Where(IsGrabbableSellable).ToList();
             return sellableGrabbables;
+        }
+        
+        private static bool IsGrabbableSellable(GrabbableObject grabbable)
+        {
+            return grabbable.itemProperties.isScrap
+                   && !grabbable.isPocketed
+                   && grabbable.scrapValue > 0
+                   && grabbable.name != "ClipboardManual"
+                   && grabbable.name != "StickyNoteItem"
+                   && grabbable.name != "Gift"
+                   && grabbable.name != "Shotgun"
+                   && grabbable.name != "Ammo";
         }
 
         private static void HighlightGrabbables(List<GrabbableObject> grabbables)
         {
+            Highlighter.Clear();
             foreach (var go in grabbables.Select(g => g.gameObject))
             {
                 P.Log($"Adding {go.name} to Outliner");
